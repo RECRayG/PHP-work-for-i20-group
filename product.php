@@ -61,7 +61,7 @@ if(empty($_GET) && htmlspecialchars($_SERVER['PHP_SELF']) != MAIN_PAGE) {
                                 exit;
                             }
 
-                            if($_GET['cat_id'] != $product_main[0]['id_category']) {
+                            if($_GET['cat_id'] <= 0) {
                                 header("Location: " . ERROR_404_PATH);
                                 exit;
                             }
@@ -76,7 +76,7 @@ if(empty($_GET) && htmlspecialchars($_SERVER['PHP_SELF']) != MAIN_PAGE) {
                                 exit;
                             }
 
-                            if($_GET['id'] <= 0) {
+                            if($_GET['id'] <= 0 || $_GET['id'] != $product_main[0]['id_product']) {
                                 header("Location: " . ERROR_404_PATH);
                                 exit;
                             }
