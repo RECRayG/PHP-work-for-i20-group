@@ -1,0 +1,463 @@
+@font-face {
+	font-family: 'Circe Bold';
+	src: url('../fonts/circe_bold.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/circe_bold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/circe_bold.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/circe_bold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/circe_bold.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/circe_bold.svg#circe_bold') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+	font-family: 'Circe ExtraBold';
+	src: url('../fonts/circe_extrabold.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/circe_extrabold.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/circe_extrabold.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/circe_extrabold.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/circe_extrabold.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/circe_extrabold.svg#circe_extrabold') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+	font-family: 'Circe ExtraLight';
+	src: url('../fonts/circe_extralight.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/circe_extralight.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/circe_extralight.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/circe_extralight.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/circe_extralight.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/circe_extralight.svg#circe_extralight') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+	font-family: 'Circe Light';
+	src: url('../fonts/circe_light.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/circe_light.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/circe_light.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/circe_light.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/circe_light.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/circe_light.svg#circe_light') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+	font-family: 'Circe';
+	src: url('../fonts/circe.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/circe.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/circe.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/circe.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/circe.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/circe.svg#circe') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+	font-family: 'Circe Thin';
+	src: url('../fonts/circe_thin.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/circe_thin.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/circe_thin.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/circe_thin.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/circe_thin.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/circe_thin.svg#circe_thin') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+@font-face {
+	font-family: 'Geometria-Medium';
+	src: url('../fonts/geometria-medium.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/geometria-medium.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/geometria-medium.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/geometria-medium.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/geometria-medium.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/geometria-medium.svg#geometria-medium') format('svg'); /* Chrome < 4, Legacy iOS */
+}
+
+a:hover {
+	color: #2963a7;
+	text-decoration: none;
+}
+
+a:visited {
+	color: purple;
+	text-decoration: none;
+}
+
+.layout {
+  max-width: 1150px;
+  padding: 25px 0 25px 0;
+  margin: 0px auto;
+  background-color: white;
+}
+
+.product {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+	align-items: flex-start;
+  gap: 5rem;
+}
+
+.product__images {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 0 20px 20px;
+	margin: 0 -12px;
+}
+
+.product__images-list {
+  display: flex;
+  flex-direction: column;
+	gap: 51px;
+}
+
+.product__image--size {
+  width: 90px;
+  height: 130px;
+}
+
+.product__images-zoom {
+  width: 340px;
+  height: 492px;
+	margin: 0 12px;
+}
+
+.product__image-zoom {
+	transition: .1s;
+}
+
+.product__image-zoom:hover {
+	transform: translate(3px,3px);
+}
+
+.product__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 20px 20px 20px 0;
+}
+
+.product__title {
+  font-family: 'Circe ExtraBold', sans-serif;
+  font-size: 24px;
+  width: 100%;
+  text-transform: uppercase;
+}
+
+.product__links {
+  font-family: 'Circe Light', sans-serif;
+  font-size: 14px;
+  width: 100%;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 3%;
+}
+
+.product__links--pos {
+	margin-top: 1%;
+}
+
+.product__link--dec {
+  text-decoration: none;
+	color: #559cee;
+}
+
+.product__price {
+	font-family: 'Geometria-Medium', sans-serif;
+	width: 85%;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.product__price--pos {
+	margin-top: 4%;
+}
+
+.product__sale {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 5%;
+	flex: 1;
+	flex-wrap: wrap;
+}
+
+.product__price-old {
+	text-decoration: line-through;
+	color: #d0cfcf;
+}
+
+.product__price-new {
+	color: #9b9b9b;
+}
+
+.product__price-promocode {
+	flex: 2;
+}
+
+.product__text-promocode--dec {
+	font-family: 'Circe Light', sans-serif;
+}
+
+.product__delivery-layer {
+	width: 60%;
+	background-color: #f4f4f4;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+.product__delivery-layer-pos {
+	margin-top: 2%;
+}
+
+.product__delivery-info {
+	font-family: 'Circe Light', sans-serif;
+	width: 100%;
+	margin: 5% 0 5% 7%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	gap: 5px;
+}
+
+.product__delivery-info-link--dec {
+	text-decoration: none;
+	color: #559cee;
+}
+
+.product__num-counter {
+	border: 3px solid #d9d9d9;
+	width: 159px;
+	height: 45px;
+	border-radius: 5px;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.product__num-counter--pos {
+	margin-top: 5%;
+}
+
+.product__num-minus {
+	border: none;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-right: 3px;
+	border-right-style: solid;
+	border-right-color: #d9d9d9;
+	background-color: white;
+	cursor: pointer;
+	flex: 1;
+	position: relative;
+}
+
+.product__num-minus-txt {
+	font-family: 'Circe Light', sans-serif;
+	position: absolute;
+	top: -50%;
+	left: 20%;
+	font-size: 64px;
+}
+
+.product__count {
+	width: 100%;
+	text-align: center;
+	background-color: #f4f4f4;
+	position: relative;
+	flex: 2;
+}
+
+.product__count-current {
+	font-family: 'Circe', sans-serif;
+	position: absolute;
+	transform: translate(-50%,15%);
+	font-size: 28px;
+}
+
+.product__num-plus {
+	border: none;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-left: 3px;
+	border-left-style: solid;
+	border-left-color: #d9d9d9;
+	background-color: white;
+	cursor: pointer;
+	flex: 1;
+	position: relative;
+}
+
+.product__num-plus-txt {
+	font-family: 'Circe Light', sans-serif;
+	position: absolute;
+	top: -17%;
+	left: 17%;
+	font-size: 48px;
+}
+
+.product__buy {
+	width: 100%;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: flex-start;
+	flex-wrap: wrap;
+	gap: 50px;
+}
+
+.product__buy--pos {
+	margin-top: 5%;
+}
+
+.product__buy-button {
+	width: 165px;
+	height: 39px;
+	font-family: 'Circe Bold', sans-serif;
+	text-transform: uppercase;
+	color: white;
+	background-color: #006be5;
+	border: none;
+	cursor: pointer;
+	align-items: center;
+	transition: .2s;
+}
+
+.product__buy-button:hover {
+	transform: translate(0,-3px);
+	box-shadow: 0 15px 20px rgba(46, 46, 255, .5);
+}
+
+.product__selected-button {
+	width: 165px;
+	height: 39px;
+	font-family: 'Circe Bold', sans-serif;
+	text-transform: uppercase;
+	border: 3px;
+	border-style: solid;
+	border-color: #d9d9d9;
+	background-color: white;
+	cursor: pointer;
+}
+
+.product__shares {
+	margin-top: 5%;
+	width: 80%;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: center;
+	flex-wrap: wrap;
+	gap: 8%;
+}
+
+.product__share--dec {
+	text-decoration: none;
+}
+
+.product__share-img--dec {
+	border-radius: 50%;
+}
+
+.product__share-list {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	gap: 6%;
+}
+
+.product__share-img1 {
+	/* Задаём скорость анимации transform при изменении этого свойства*/
+	/*ease-in-out для плавного воспроизведения анимации в начале и в конце*/
+	transition: transform.8s ease-in-out;
+}
+.product__share-img1:hover {
+	transform: rotate(360deg);
+}
+
+.product__share-img2 {
+	/* Задаём скорость анимации transform при изменении этого свойства*/
+	/*ease-in-out для плавного воспроизведения анимации в начале и в конце*/
+	transition: transform.8s ease-in-out;
+}
+.product__share-img2:hover {
+	transform: rotate(360deg);
+}
+
+.product__share-img3 {
+	/* Задаём скорость анимации transform при изменении этого свойства*/
+	/*ease-in-out для плавного воспроизведения анимации в начале и в конце*/
+	transition: transform.8s ease-in-out;
+}
+.product__share-img3:hover {
+	transform: rotate(360deg);
+}
+
+.product__share-img4 {
+	/* Задаём скорость анимации transform при изменении этого свойства*/
+	/*ease-in-out для плавного воспроизведения анимации в начале и в конце*/
+	transition: transform.8s ease-in-out;
+}
+.product__share-img4:hover {
+	transform: rotate(360deg);
+}
+
+.product__share-text {
+	font-family: 'Circe Light', sans-serif;
+	text-transform: uppercase;
+}
+
+.product__share-count {
+	width: 40px;
+	height: 30px;
+	position: relative;
+	background-color: #efefef;
+	z-index: 2;
+}
+
+.product__share-count-triangle {
+  position: absolute;
+	width: 15px;
+	height: 15px;
+	color: #efefef;
+	background-color: #efefef;
+  top: 25%;
+	left: -5%;
+  transform: translate(-50%,-50%);
+	transform: rotate(45deg);
+	z-index: 1;
+}
+
+.product__share-count-current {
+	font-family: 'Circe Light', sans-serif;
+	position: absolute;
+	transform: translate(35%,25%);
+	z-index: 2;
+}
+
+.product__description {
+	width: 680px;
+	font-family: 'Circe Light', sans-serif;
+	margin-top: 5%;
+	overflow-wrap: break-word;
+	overflow-y: auto;
+}
