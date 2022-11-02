@@ -21,7 +21,7 @@
     <main>
         <div class="catalog">
             <?php
-                $list = getListAllCategories();
+                $list = getListCategories();
                 if($list === false) {echo "ERROR!"; exit;}
                 if(!count($list)) {echo "EMPTY!"; exit;}
             ?>

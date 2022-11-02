@@ -52,27 +52,16 @@ if(empty($_GET) && htmlspecialchars($_SERVER['PHP_SELF']) != MAIN_PAGE) {
                         ?>
 
                         <?php
-                        if(!isset($_GET['cat_name'])) {
+                        if(empty($_GET['cat_id'])) {
                             header("Location: " . ERROR_404_PATH);
                             exit;
                         } else {
-                            if(!clearStr($_GET['cat_name']) || clearInt($_GET['cat_name'])) {
+                            if(!clearInt($_GET['cat_id'])) {
                                 header("Location: " . ERROR_404_PATH);
                                 exit;
                             }
 
-                            $count_identity = count($product_main) + count($product_else_categories);
-                            if($_GET['cat_name'] != $product_main[0]['main_category'])
-                                $count_identity--;
-
-                            if(!count($product_else_categories)) {
-                                foreach($product_else_categories as $category) {
-                                    if($_GET['cat_name'] != $category['dlc_category'])
-                                        $count_identity--;
-                                }
-                            }
-
-                            if($count_identity == 0) {
+                            if($_GET['cat_id'] != $product_main[0]['id_category']) {
                                 header("Location: " . ERROR_404_PATH);
                                 exit;
                             }

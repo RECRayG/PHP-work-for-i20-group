@@ -110,7 +110,7 @@ function getProductsLimitFromCategory($id_category, $num_page) {
                 inner join categories cat on cat.id_category = mpc.id_category
                 inner join preview_picture_product ppp on ppp.id_product = pr.id_product
                 inner join pictures pic on pic.id_picture = ppp.id_picture) products
-            where id_category = " . clearInt($id_category) . "
+            where id_category = " . clearInt($id_category) . " and is_active = true
             order by id_product
             limit " . ((clearInt($num_page) - 1) * PRODUCTS_LIMIT) . ", ". PRODUCTS_LIMIT . ";";
 

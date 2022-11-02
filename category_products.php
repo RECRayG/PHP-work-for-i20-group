@@ -28,7 +28,7 @@
     <main>
         <div class="catalog">
             <?php
-                $list = getListAllCategories();
+                $list = getListCategories();
                 if($list === false) {echo "ERROR!"; exit;}
                 if(!count($list)) {echo "EMPTY!"; exit;}
             ?>
@@ -40,7 +40,7 @@
             isset($_GET['page']) ? $current_page = $_GET['page'] : $current_page = 1;
             if(!clearInt($_GET['page'])) {header("Location: " . ERROR_404_PATH); exit;};
 
-            if(!isset($_GET['cat_id'])) {
+            if(empty($_GET['cat_id'])) {
                 header("Location: " . ERROR_404_PATH);
                 exit;
             } else {
@@ -48,7 +48,7 @@
                     header("Location: " . ERROR_404_PATH);
                     exit;
                 }
-                if(clearInt($_GET['cat_id']) > count($list) || $_GET['cat_id'] <= 0) {
+                if($_GET['cat_id'] <= 0) {
                     header("Location: " . ERROR_404_PATH);
                     exit;
                 }
@@ -82,12 +82,12 @@
                 ?>
                     <div class="products__container-main">
                         <div class="products__container-main-image">
-                            <a href="product.php?cat_name=<?=$item['category_name']?>&id=<?=$item['id_product']?>">
+                            <a href="product.php?cat_id=<?=$_GET['cat_id']?>&id=<?=$item['id_product']?>">
                                 <img src="<?=IMG_LOCATION . "/" . getMainCategoryNameByProduct($item['id_product']) . "/" . $item['picture_src']?>" alt="<?=$item['picture_alt']?>" title="<?=$item['picture_alt']?>">
                             </a>
                             <div class="products__container-category-bottom">
                                 <div class="products__container-product-category">
-                                    <?=$item['category_name']?>
+                                    <?=getMainCategoryNameByProduct($item['id_product'])?>
                                 </div>
                                 <div class="products__container-product-name">
                                     <?=$item['name']?>
